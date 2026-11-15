@@ -2,7 +2,34 @@
 <html>
 <head>
     <title>Komal Singh | Portfolio</title>
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
 
+body.dark-mode header,
+body.dark-mode footer {
+    background: #080820;
+}
+
+body.dark-mode nav {
+    background: #202040;
+}
+
+body.dark-mode .card {
+    background: #252525;
+    color: white;
+}
+
+#themeBtn {
+    background: #5145a8;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 12px;
+}
     <style>
         * {
             margin: 0;
@@ -90,6 +117,7 @@
 <header>
     <h1>Komal Singh</h1>
     <p>Student | BCA (AI & Data Science)</p>
+    <button id="themeBtn" onclick="toggleTheme()">🌙 Dark Mode</button>
 </header>
 
 <nav>
@@ -145,6 +173,19 @@
 <footer>
     <p>© 2026 Komal Singh | Personal Portfolio</p>
 </footer>
+    <script>
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+
+    const btn = document.getElementById("themeBtn");
+
+    if (document.body.classList.contains("dark-mode")) {
+        btn.innerText = "☀️ Light Mode";
+    } else {
+        btn.innerText = "🌙 Dark Mode";
+    }
+}
+</script>
 
 </body>
 </html>
